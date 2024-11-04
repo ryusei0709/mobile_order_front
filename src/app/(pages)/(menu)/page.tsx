@@ -1,4 +1,3 @@
-import MenuBasicCard from '@/app/components/card/MenuBasicCard'
 import MenuList from '@/app/features/menu/MenuList'
 
 import React from 'react'
