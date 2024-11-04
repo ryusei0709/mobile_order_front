@@ -18,9 +18,9 @@ export default function RootLayout({
     <html lang="ja">
       <body>
         <AppRouterCacheProvider>
-          {/* <ThemeProvider theme={theme}> */}
+          <ThemeProvider theme={theme}>
             {children}
-          {/* </ThemeProvider> */}
+          </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
     </html>
