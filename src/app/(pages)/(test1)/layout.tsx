@@ -10,10 +10,14 @@ export default function Test1RootLayout({
 }) {
   return (
     <>
-      <header>
-        header1
-      </header>
-      {children}
+      <body>
+        <header>
+          header1
+        </header>
+        <main>
+          {children}
+        </main>
+      </body>
     </>
   )
 }
