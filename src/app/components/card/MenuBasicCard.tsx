@@ -5,7 +5,11 @@ import Typography from '@mui/material/Typography';
 import { CardMedia } from '@mui/material';
 
 
-const MenuBasicCard = () => {
+type MenuBasicCardProps = {
+  menuTitle : string
+}
+
+const MenuBasicCard: React.FC<MenuBasicCardProps> = ({ menuTitle }) => {
   return (
     <Card sx={{ maxWidth: 275, backgroundColor: 'unset', boxShadow: 'unset' }}>
       <CardContent>
@@ -15,7 +19,7 @@ const MenuBasicCard = () => {
           alt="Paella dish"
         />
         <Typography>
-          testtesttesttetetetete
+          {menuTitle}
         </Typography>
       </CardContent>
     </Card>

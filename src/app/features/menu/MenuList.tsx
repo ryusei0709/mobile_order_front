@@ -11,10 +11,12 @@ const MenuList: React.FC = () => {
         useFlexGap
         sx={{ flexWrap: 'wrap', justifyContent: 'center' }}
       >
-        <MenuBasicCard />
-        <MenuBasicCard />
-        <MenuBasicCard />
-        <MenuBasicCard />
+        <MenuBasicCard
+          menuTitle='メニュータイトルです'
+        />
+        <MenuBasicCard
+          menuTitle='メニュータイトルです'
+        />
       </Stack>
 
     </Box>
