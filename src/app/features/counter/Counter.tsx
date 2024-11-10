@@ -1,9 +1,9 @@
 
 'use client'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 
-import { decrement, increment } from '@/app/redux/counter/counterSlice'
+import { decrement, increment, incrementByAmount , reset } from '@/app/redux/counter/counterSlice'
 import { useSelector } from '@/app/redux/store'
 import { useDispatch } from 'react-redux'
 
@@ -18,14 +18,19 @@ const Counter = () => {
           aria-label="Increment value"
           onClick={() => dispatch(increment())}
         >
-          Increment
+          インクリメント
         </button>
         <span>{count}</span>
         <button
           aria-label="Decrement value"
           onClick={() => dispatch(decrement())}
         >
-          Decrement
+          デクリメント
+        </button>
+        <button
+          onClick={() => dispatch(reset())}
+        >
+          リセット
         </button>
       </div>
     </div>
