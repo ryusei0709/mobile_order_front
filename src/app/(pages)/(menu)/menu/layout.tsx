@@ -1,6 +1,7 @@
 
 
 import Header from '@/app/components/common/header/Header';
+import { Box } from '@mui/material';
 import * as React from 'react';
 
 
@@ -13,12 +14,12 @@ export default function MenuRootLayout({ children }: {
   children: React.ReactNode
 }) {
   return (
-    <>
+    <Box sx={{ maxWidth: '600px', mx: 'auto'}}>
       <Header />
       <main>
         {children}
       </main>
-    </>
+    </Box>
   )
 }
 
