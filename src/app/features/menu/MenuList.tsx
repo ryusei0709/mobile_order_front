@@ -8,8 +8,10 @@ const MenuList: React.FC = async () => {
 
   const menuItems = await fetchMenu();
 
+  console.log(menuItems)
+
   return (
-    <Box sx={{ maxWidth: '480px' , minWidth: '320px' }}>
+    <Box sx={{ maxWidth: '480px' , minWidth: '320px' , mx: 'auto' }}>
       <Stack
         spacing={{ xs: 1, sm: 2 }}
         direction="row"
