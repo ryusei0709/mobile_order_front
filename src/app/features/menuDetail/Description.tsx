@@ -1,29 +1,42 @@
-import { Box } from '@mui/material'
+import fetchMenuItem from '@/app/lib/api/fetchMenuItem'
+import { Box, Skeleton } from '@mui/material'
 import Image from 'next/image'
+import Grid from '@mui/material/Grid2';
 import React from 'react'
 
-const Description = () => {
+type DescriptionProps = {
+  menuTitle: string
+  menuImage: string
+  // price: number
+}
+
+const Description: React.FC<DescriptionProps> = async ({ menuTitle, menuImage }) => {
+
   return (
-    <div>
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'row',
-          p: 1,
-          m: 1,
-        }}
-      >
-        <div>
-          <Image
-            src='/img/test.jpg'
+    <Box
+    >
+      <Grid container spacing={1}>
+        <Grid size={4}>
+          <img
+            src={menuImage}
             alt='test'
-            width={75}
-            height={75}
+            width={100}
+            height={100}
           />
-        </div>
-        <div>Item 1</div>
-      </Box>
-    </div>
+          {/* <Image
+            src={menuImage}
+            alt='test'
+            width={100}
+            height={100}
+          /> */}
+          {/* <Skeleton height={100} /> */}
+        </Grid>
+        <Grid size={8}>
+          {menuTitle}
+        </Grid>
+      </Grid>
+      <div>Item 1</div>
+    </Box>
   )
 }
 

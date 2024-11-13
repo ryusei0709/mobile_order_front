@@ -4,11 +4,7 @@ import React from 'react'
 
 const MenuRootPage = () => {
   return (
-    <div>
-        <MenuList>
-
-        </MenuList>
-    </div>
+        <MenuList/>
   )
 }
 

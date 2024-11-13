@@ -3,10 +3,16 @@ import MenuDetailContainer from '@/app/features/menuDetail/MenuDetailContainer'
 import Opstion from '@/app/features/menuDetail/Opstion'
 import React from 'react'
 
-const MeunDetailPage = () => {
+const MeunDetailPage = async ({ params }: {
+  params: Promise<{ menuId: string }>
+}) => {
+  const menuId = (await params).menuId
+
   return (
     <>
-      <MenuDetailContainer />
+      <MenuDetailContainer
+        menuId={menuId}
+      />
     </>
   )
 }
