@@ -1,5 +1,5 @@
 import fetchMenuItem from '@/app/lib/api/fetchMenuItem'
-import { Box, Skeleton } from '@mui/material'
+import { Box, Skeleton, Typography } from '@mui/material'
 import Image from 'next/image'
 import Grid from '@mui/material/Grid2';
 import React from 'react'
@@ -11,31 +11,27 @@ type DescriptionProps = {
 }
 
 const Description: React.FC<DescriptionProps> = async ({ menuTitle, menuImage }) => {
-
   return (
-    <Box
-    >
+    <Box sx={{ backgroundColor: '#fff' , borderBottom: 'solid rgba(0,0,0,.2) 1px', }}>
       <Grid container spacing={1}>
         <Grid size={4}>
-          <img
+          <Image
+            priority={true}
             src={menuImage}
-            alt='test'
+            alt='画像の説明'
             width={100}
             height={100}
           />
-          {/* <Image
-            src={menuImage}
-            alt='test'
-            width={100}
-            height={100}
-          /> */}
-          {/* <Skeleton height={100} /> */}
         </Grid>
         <Grid size={8}>
-          {menuTitle}
+          <Typography>
+            {menuTitle}
+          </Typography>
+          <Typography>
+            ¥300
+          </Typography>
         </Grid>
       </Grid>
-      <div>Item 1</div>
     </Box>
   )
 }
