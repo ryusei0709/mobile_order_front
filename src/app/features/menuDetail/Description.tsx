@@ -12,16 +12,18 @@ type DescriptionProps = {
 
 const Description: React.FC<DescriptionProps> = async ({ menuTitle, menuImage }) => {
   return (
-    <Box sx={{ backgroundColor: '#fff' , borderBottom: 'solid rgba(0,0,0,.2) 1px', }}>
+    <Box sx={{ backgroundColor: '#fff', borderBottom: 'solid rgba(0,0,0,.2) 1px', }}>
       <Grid container spacing={1}>
         <Grid size={4}>
+          <Box sx={{ m: 1 }}>
           <Image
             priority={true}
             src={menuImage}
             alt='画像の説明'
             width={100}
             height={100}
-          />
+            />
+            </Box>
         </Grid>
         <Grid size={8}>
           <Typography>
