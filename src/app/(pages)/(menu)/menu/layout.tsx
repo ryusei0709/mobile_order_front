@@ -1,9 +1,6 @@
-
-
-import Header from '@/app/components/common/header/Header';
+import Header from '@/app/components/layout/common/header/Header';
 import { Box } from '@mui/material';
 import * as React from 'react';
-
 
 export const metadata = {
   title: 'Next.js',
@@ -22,7 +19,3 @@ export default function MenuRootLayout({ children }: {
     </Box>
   )
 }
-
-
-
-
