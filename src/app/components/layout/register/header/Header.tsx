@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import AdbIcon from '@mui/icons-material/Adb';
 
-export default function RegisterHeader() {
+const RegisterHeader = () => {
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
@@ -33,3 +33,5 @@ export default function RegisterHeader() {
     </AppBar>
   );
 }
+
+export default React.memo(RegisterHeader)
