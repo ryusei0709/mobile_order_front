@@ -13,8 +13,6 @@ import { postRegister } from '@/app/features/register/api/postRegister';
 
 import RegisterInputGroup from './RegisterInputGroup';
 
-
-
 const StyledCard = styled(MuiCard)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
@@ -46,7 +44,6 @@ const RegisterForm: React.FC = () => {
   const submitHandler = methods.handleSubmit((data, e) => {
     e?.preventDefault();
 
-    console.log('data::',data);
     postRegister(data);
   });
 
