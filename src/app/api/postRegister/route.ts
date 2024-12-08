@@ -4,7 +4,7 @@ export async function POST(request: NextRequest) {
   // const session = await getServerSession(authOptions);
 
   const body = await request.json();
-  
+
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_HOST}/api/v1/auth`, {
       method: 'POST',
@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
     });
 
     const data = await res.json();
-    console.log('responseData::', data)
+    console.log('responseData::', data);
     // return NextResponse.json({ data }, { status: res.status });
     return NextResponse.json(data);
   } catch (error) {

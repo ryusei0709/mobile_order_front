@@ -1,14 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import RegisterForm from '@/app/features/register/RegisterForm'
+import RegisterForm from '@/app/features/register/RegisterForm';
 
 const RegisterContainer = ({ children }: { children: React.ReactNode }) => {
+  return <RegisterForm />;
+};
 
-
-  return (
-      <RegisterForm />
-  )
-}
-
-export default RegisterContainer
-
+export default RegisterContainer;

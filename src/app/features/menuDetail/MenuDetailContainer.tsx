@@ -1,25 +1,24 @@
-import React from 'react'
+import React from 'react';
 
-import Description from '@/app/features/menuDetail/Description'
-import Opstion from '@/app/features/menuDetail/Opstion'
+import Description from '@/app/features/menuDetail/Description';
+import Opstion from '@/app/features/menuDetail/Opstion';
 import fetchMenuItem from '@/app/lib/api/fetchMenuItem';
 
 type MenuDetailContainerPorps = {
-  menuId: string
-}
+  menuId: string;
+};
 
-const MenuDetailContainer: React.FC<MenuDetailContainerPorps> = async ({ menuId }) => {
+const MenuDetailContainer: React.FC<MenuDetailContainerPorps> = async ({
+  menuId,
+}) => {
   const menuItem = await fetchMenuItem(menuId);
-  console.log('menuItem',menuItem)
+  console.log('menuItem', menuItem);
   return (
     <>
-      <Description
-        menuTitle={menuItem.title}
-        menuImage={menuItem.url}
-      />
+      <Description menuTitle={menuItem.title} menuImage={menuItem.url} />
       <Opstion />
     </>
-  )
-}
+  );
+};
 
-export default MenuDetailContainer
+export default MenuDetailContainer;

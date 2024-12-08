@@ -1,12 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import MenuList from '@/app/features/menu/MenuList'
-
+import MenuList from '@/app/features/menu/MenuList';
 
 const MenuRootPage = () => {
-  return (
-        <MenuList/>
-  )
-}
+  return <MenuList />;
+};
 
-export default MenuRootPage
+export default MenuRootPage;
