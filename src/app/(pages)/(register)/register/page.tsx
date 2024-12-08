@@ -1,5 +1,6 @@
-import RegisterContainer from '@/app/features/register/RegisterContainer'
 import React from 'react'
+
+import RegisterContainer from '@/app/features/register/RegisterContainer'
 
 type RegisterRootPageType = {
 

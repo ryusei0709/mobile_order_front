@@ -1,8 +1,7 @@
-import Box from '@mui/material/Box';
-import MenuBasicCard from '@/app/components/card/MenuBasicCard';
-
 import { Stack } from '@mui/material';
-import { useState } from 'react';
+import Box from '@mui/material/Box';
+
+import MenuBasicCard from '@/app/components/card/MenuBasicCard';
 import fetchMenu from '@/app/lib/api/fetchMenu';
 const MenuList: React.FC = async () => {
 

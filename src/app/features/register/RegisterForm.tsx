@@ -1,14 +1,19 @@
 'use client'
-import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import MuiCard from '@mui/material/Card';
 import Divider from '@mui/material/Divider';
 import FormLabel from '@mui/material/FormLabel';
-import Typography from '@mui/material/Typography';
-import MuiCard from '@mui/material/Card';
 import { styled } from '@mui/material/styles';
-import RegisterInputGroup from './RegisterInputGroup';
+import Typography from '@mui/material/Typography';
+import * as React from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
+
+import { postRegister } from '@/app/features/register/api/postRegister';
+
+import RegisterInputGroup from './RegisterInputGroup';
+
+
 
 const StyledCard = styled(MuiCard)(({ theme }) => ({
   display: 'flex',
@@ -31,15 +36,18 @@ const StyledCard = styled(MuiCard)(({ theme }) => ({
 
 export type RegisterFormData = {
   name: string;
+  email: string;
+  password: string;
 };
 
 const RegisterForm: React.FC = () => {
-  const methods = useForm<RegisterFormData>({
-  });
+  const methods = useForm<RegisterFormData>();
 
   const submitHandler = methods.handleSubmit((data, e) => {
     e?.preventDefault();
-    console.log(e)
+
+    console.log('data::',data);
+    postRegister(data);
   });
 
   return (

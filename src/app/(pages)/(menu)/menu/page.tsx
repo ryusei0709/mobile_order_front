@@ -1,6 +1,7 @@
+import React from 'react'
+
 import MenuList from '@/app/features/menu/MenuList'
 
-import React from 'react'
 
 const MenuRootPage = () => {
   return (

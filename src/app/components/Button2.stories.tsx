@@ -1,5 +1,6 @@
 // Reactを使うためにimport命令
 import React from 'react';
+
 import Button2 from './Button2';
 
 

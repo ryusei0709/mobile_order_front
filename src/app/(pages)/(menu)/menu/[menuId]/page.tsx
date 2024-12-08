@@ -1,7 +1,6 @@
-import Description from '@/app/features/menuDetail/Description'
-import MenuDetailContainer from '@/app/features/menuDetail/MenuDetailContainer'
-import Opstion from '@/app/features/menuDetail/Opstion'
 import React from 'react'
+
+import MenuDetailContainer from '@/app/features/menuDetail/MenuDetailContainer'
 
 const MeunDetailPage = async ({ params }: {
   params: Promise<{ menuId: string }>

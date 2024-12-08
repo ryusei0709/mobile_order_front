@@ -1,5 +1,6 @@
 
 import * as React from 'react';
+
 import RegisterHeader from '@/app/components/layout/register/header/Header';
 
 export const metadata = {

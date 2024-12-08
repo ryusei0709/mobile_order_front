@@ -1,7 +1,6 @@
-import fetchMenuItem from '@/app/lib/api/fetchMenuItem'
-import { Box, Skeleton, Typography } from '@mui/material'
-import Image from 'next/image'
+import { Box, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid2';
+import Image from 'next/image'
 import React from 'react'
 
 type DescriptionProps = {

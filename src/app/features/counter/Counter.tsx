@@ -1,11 +1,11 @@
 
 'use client'
 
-import React, { useEffect } from 'react'
-
-import { decrement, increment, incrementByAmount , reset } from '@/app/redux/counter/counterSlice'
-import { useSelector } from '@/app/redux/store'
+import React from 'react'
 import { useDispatch } from 'react-redux'
+
+import { decrement, increment,  reset } from '@/app/redux/counter/counterSlice'
+import { useSelector } from '@/app/redux/store'
 
 const Counter = () => {
   const count = useSelector(state => state.counter.value)

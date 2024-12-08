@@ -1,10 +1,11 @@
 
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
-import { Provider } from 'react-redux'
 
 import '@/app/globals.css';
 import { ThemeProvider } from '@mui/material';
+
 import theme from '@/app/theme';
+
 import { Providers } from './redux/provider';
 
 export const metadata = {

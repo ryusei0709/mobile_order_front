@@ -1,9 +1,9 @@
-import * as React from 'react';
+import AdbIcon from '@mui/icons-material/Adb';
 import AppBar from '@mui/material/AppBar';
+import Container from '@mui/material/Container';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import AdbIcon from '@mui/icons-material/Adb';
+import * as React from 'react';
 
 const RegisterHeader = () => {
   return (
