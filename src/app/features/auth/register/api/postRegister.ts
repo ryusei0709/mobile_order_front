@@ -1,4 +1,4 @@
-import { RegisterFormData } from '@/app/features/register/RegisterForm';
+import { RegisterFormData } from '@/app/features/auth/register/RegisterForm';
 
 export const postRegister = async (data: RegisterFormData): Promise<any> => {
   const res = await fetch('/api/postRegister', {
