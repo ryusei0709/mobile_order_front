@@ -12,6 +12,7 @@ import { FormProvider, useForm } from 'react-hook-form';
 import RegisterInputGroup from '../register/RegisterInputGroup';
 import { StyledCard } from '../common/styles';
 import { siginIn } from './api/siginIn';
+import useLogin from '@/app/hooks/useLogin';
 
 export type SiginInFormData = {
   email: string;
@@ -20,10 +21,12 @@ export type SiginInFormData = {
 
 const SiginInForm: React.FC = () => {
   const methods = useForm<SiginInFormData>();
+  const login = useLogin();
 
   const submitHandler = methods.handleSubmit(async (data, e) => {
     e?.preventDefault();
-    const response  = await siginIn(data);
+    const response  = await login(data);
+    // const response  = await siginIn(data);
     console.log('sigin_in_response::', response);
   });
 

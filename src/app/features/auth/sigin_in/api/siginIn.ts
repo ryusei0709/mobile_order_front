@@ -1,23 +1,20 @@
 import { signIn } from "next-auth/react";
 import { SiginInFormData } from "@/app/features/auth/sigin_in/SiginInForm";
 
-export const siginIn = async (data: SiginInFormData): Promise<any> => {
-  console.log("data::", data);
+export const siginIn = async (data: SiginInFormData) => {
 
-  const result = await signIn("credentials", {
-    // redirect: false, // リダイレクトを無効化
-    email: data.email,
-    password: data.password,
-  });
+  // const result = await signIn("credentials", {
+  //   redirect: false, // リダイレクトを無効化
+  //   email: data.email,
+  //   password: data.password,
+  //   callbackUrl: "/menu", // 認証成功後のリダイレクト先
+  // });
 
-  // 結果をログ出力
-  console.log("Result::", result);
+  // console.log('result::',result)
 
-  // エラーがあれば処理
-  if (result?.error) {
-    console.error("Login error:", result.error);
-    return { success: false, error: result.error };
-  }
+  // if (result?.error) {
+  //   return { success: false, error: result.error };
+  // }
 
-  return { success: true, user: result };
+  // return { success: true, user: result };
 };
