@@ -5,26 +5,19 @@ import { useRouter, useSearchParams } from 'next/navigation';
 
 
 const useLogin = () => {
-  const router = useRouter()
   const searchParams = useSearchParams()
-
   return useCallback(async (data: SiginInFormData) => {
-    const callbackUrl = searchParams.get('callback_url') ?? '/menu'
-    console.log(callbackUrl)
+    const callbackUrl = searchParams.get('callbackUrl') ?? '/menu'
     const result = await signIn("credentials", {
-      redirect: false, // リダイレクトを無効化
+      redirect: false,
       email: data.email,
       password: data.password,
     });
     if (result?.error) {
-      return { success: false, error: result.error };
+      return { success: false, error: result.error, callbackUrl: null };
     }
-
-    router.push(callbackUrl)
-
-    return { success: true, user: result };
+    return { success: true, user: result , callbackUrl: callbackUrl };
   }, [])
-
 }
 
 export default useLogin
