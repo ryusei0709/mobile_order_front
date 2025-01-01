@@ -10,6 +10,6 @@ export default withAuth({
 // 以下のリクエストから始まる、ルーティングはmmiddlewareの処理から除外する
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico|img|).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico|img|register).*)',
   ],
 };
